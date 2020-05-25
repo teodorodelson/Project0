@@ -18,7 +18,7 @@ pipeline {
               // branch: the branch that you want to build
               // credentialsId: the ID of the credentials for your GitLab repo that is being managed by Jenkins
               // url: url to your repo
-              git branch: 'master', credentialsId: '9d791b73-e506-42da-84a4-e9c1cefaedeb', url: 'https://gitlab.com/2005-javareact/trainingrepos/1w-abcmartv3.0.git'
+              git branch: 'master', credentialsId: '032978c8-c93e-4946-9f24-028e54959616', url: 'https://github.com/teodorodelson/dev.git'
            }
         }
         stage('Install node modules'){
