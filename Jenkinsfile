@@ -41,7 +41,7 @@ pipeline {
                 script {
                     // start the application server
                     // the nohup means that we want to log the output to a file instead
-                    sh 'npm run dev'
+                    sh 'nohup npm run dev &'
                 }
             }
         }
