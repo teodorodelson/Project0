@@ -6,7 +6,7 @@ pipeline {
         PORT=3000
     }
            
-        stage('Download') {
+        stages('Download') {
            steps {
               // Download code from a GitHub repository
               // branch: the branch that you want to build
