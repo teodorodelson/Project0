@@ -13,7 +13,7 @@ pipeline {
               // credentialsId: the ID of the credentials for your GitLab repo that is being managed by Jenkins
               // url: url to your repo
               git branch: 'master', credentialsId: '032978c8-c93e-4946-9f24-028e54959616', url: 'https://github.com/teodorodelson/dev.git'
-              sh 'git clone https://github.com/teodorodelson/dev.git'
+              
            }
         }
         stage('Install node modules'){
