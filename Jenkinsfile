@@ -4,8 +4,15 @@ pipeline {
     environment{
         JENKINS_NODE_COOKIE = 'dontkillmeplease'
         PORT=3000
-    }
-    stages {  
+    } 
+     stages {
+        stage('Preparation') { // for display purposes
+            steps {
+              // clean out the workspace
+              cleanWs()
+            }
+        } 
+
         stage('Download') {
            steps {
               // Download code from a GitHub repository
@@ -45,5 +52,5 @@ pipeline {
                 }
             }
         }
-    }
+     }
 }
