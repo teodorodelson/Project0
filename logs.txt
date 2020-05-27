@@ -1,0 +1,10 @@
+
+A request has been made to /getallCourses with the method of + GET 1590616338210
+A request has been made to /getallCourses with the method of + GET 1590616374133
+A request has been made to /getallAccounts with the method of + GET 1590616899607
+A request has been made to /getallCourses with the method of + GET 1590616907431
+A request has been made to /getallCourses with the method of + GET 1590616912436
+A request has been made to /getallCourses with the method of + GET 1590617690626
+A request has been made to /records with the method of + GET 1590617697452
+A request has been made to /getallAccounts with the method of + GET 1590618129936
+A request has been made to /getallCourses with the method of + GET 1590618134036
