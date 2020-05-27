@@ -5,15 +5,7 @@ pipeline {
         JENKINS_NODE_COOKIE = 'dontkillmeplease'
         PORT=3000
     } 
-     stages {
-        stage('Preparation') { // for display purposes
-            steps {
-              // clean out the workspace
-              cleanWs()
-            }
-        } 
-
-        stage('Download') {
+        stages('Download') {
            steps {
               // Download code from a GitHub repository
               // branch: the branch that you want to build
