@@ -6,14 +6,17 @@ import { loginRouter } from '../src/Routes/LoginRouter';
 import {GetUsers} from '../src/Routes/GetUsers';
 import {CoursesRouter} from '../src/Routes/CoursesRouter';
 import {TranscriptRouter} from '../src/Routes/Transcript';
+import cors from 'cors';
 
 export const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 app.use(sessionMiddleware);
 app.use(loginRouter);
 app.use(GetUsers);
 app.use(CoursesRouter);
 app.use(TranscriptRouter);
+
 // app.use(express.json);
 
 app.use('/logout', loginRouter);
@@ -32,8 +35,8 @@ app.use('/records', TranscriptRouter);
 
 
 if (process.env.NODE_ENV !== 'test') { 
-app.listen(3000, () => {
-    console.log(`Server  is listening on port 3000`);
+app.listen(5000, () => {
+    console.log(`Server  is listening on port 5000`);
 }) 
 };
 
