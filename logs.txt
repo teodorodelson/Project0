@@ -10,3 +10,10 @@ A request has been made to /getallAccounts with the method of + GET 159061812993
 A request has been made to /getallCourses with the method of + GET 1590618134036
 A request has been made to /getallAccounts with the method of + GET 1590674427078
 A request has been made to /getallCourses with the method of + GET 1590674433588
+A request has been made to /getallcourses with the method of + GET 1590772029641
+A request has been made to /getallcourses with the method of + GET 1590774467436
+A request has been made to /getallCourses with the method of + GET 1590870288820
+A request has been made to /login with the method of + POST 1590870602334
+A request has been made to /login with the method of + POST 1590870608955
+A request has been made to /login with the method of + POST 1590870683218
+A request has been made to /getAllaccounts with the method of + GET 1590870683406

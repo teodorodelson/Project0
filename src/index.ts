@@ -1,12 +1,12 @@
-import express from 'express';
-import { pool } from './config/index';
-import bodyParser from 'body-parser';
-import { sessionMiddleware } from './middleware/sessions_middle';
-import { loginRouter } from '../src/Routes/LoginRouter';
-import {GetUsers} from '../src/Routes/GetUsers';
-import {CoursesRouter} from '../src/Routes/CoursesRouter';
-import {TranscriptRouter} from '../src/Routes/Transcript';
-import cors from 'cors';
+import express from "express";
+import { pool } from "./config/index";
+import bodyParser from "body-parser";
+import { sessionMiddleware } from "./middleware/sessions_middle";
+import { loginRouter } from "../src/Routes/LoginRouter";
+import { GetUsers } from "../src/Routes/GetUsers";
+import { CoursesRouter } from "../src/Routes/CoursesRouter";
+import { TranscriptRouter } from "../src/Routes/Transcript";
+import cors from "cors";
 
 export const app = express();
 app.use(cors());
@@ -19,29 +19,26 @@ app.use(TranscriptRouter);
 
 // app.use(express.json);
 
-app.use('/logout', loginRouter);
-app.use('/login', loginRouter);
-app.use('/getallAccounts', GetUsers);
-app.use('/getAccountById', GetUsers);
-app.use('/register', GetUsers);
-app.use('/getAccountByEmail', GetUsers);
-app.use('/getCourses', CoursesRouter);
-app.use('/addcourse', CoursesRouter);
-app.use('/getallCourses', CoursesRouter);
-app.use('/getCoursesByDescription', CoursesRouter);
-app.use('/studDashboard', TranscriptRouter);
-app.use('/changeContact', TranscriptRouter);
-app.use('/records', TranscriptRouter);
+app.use("/logout", loginRouter);
+app.use("/login", loginRouter);
+app.use("/getallAccounts", GetUsers);
+app.use("/getAccountById", GetUsers);
+app.use("/register", GetUsers);
+app.use("/getAccountByEmail", GetUsers);
+app.use("/getCourses", CoursesRouter);
+app.use("/addcourse", CoursesRouter);
+app.use("/getallCourses", CoursesRouter);
+app.use("/getCoursesByDescription", CoursesRouter);
+app.use("/studDashboard", TranscriptRouter);
+app.use("/changeContact", TranscriptRouter);
+app.use("/records", TranscriptRouter);
 
+if (process.env.NODE_ENV !== "test") {
+  app.listen(3000, () => {
+    console.log(`Server  is listening on port 3000`);
+  });
+}
 
-if (process.env.NODE_ENV !== 'test') { 
-app.listen(5000, () => {
-    console.log(`Server  is listening on port 5000`);
-}) 
-};
-
-app.get('/', (req, res) => {
-    res.send("Welcome to School Portal v2");
-})
-
-
+app.get("/", (req, res) => {
+  res.send("Welcome to School Portal v2");
+});
