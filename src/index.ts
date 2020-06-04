@@ -9,14 +9,14 @@ import { TranscriptRouter } from "../src/Routes/Transcript";
 import cors from "cors";
 
 export const app = express();
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: "http://localhost:3000",
-//   })
-// );
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:3000",
+  })
+);
 
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
 app.use(sessionMiddleware);
 app.use(loginRouter);
